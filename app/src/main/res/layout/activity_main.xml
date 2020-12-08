@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="ValueLineChart" />
+
+
+            <org.eazegraph.lib.charts.ValueLineChart
+                android:id="@+id/cubiclinechart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/line"
+                android:layout_marginTop="20dp"
+                app:egCurveSmoothness="0.3"
+                app:egIndicatorLineColor="#FE6DA8"
+                app:egLegendHeight="45dp"
+                app:egShowStandardValue="true"
+                app:egUseCubic="true"
+                app:egUseOverlapFill="true" />
+
+            <TextView
+                android:id="@+id/under"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cubiclinechart"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="StackedBarChart" />
+
+            <org.eazegraph.lib.charts.StackedBarChart
+                android:id="@+id/stackedbarchart"
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:layout_below="@id/under"
+                android:padding="10dp"
+                app:egBarWidth="20dp"
+                app:egFixedBarWidth="true"
+                app:egLegendHeight="40dp" />
+
+
+            <TextView
+                android:id="@+id/pp"
+                android:layout_marginBottom="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/stackedbarchart"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="Examples of cahrt in this activity in the gradle section implementation 'com.github.blackfizz: eazegraph: 1.2.2@aar'
+     implementation consists of these two implemtations, 'com.nineoldandroids: library: 2.4.0'." />
+
+            <Button
+                android:id="@+id/mpBarChart"
+                android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+                android:layout_marginRight="17dp"
+                android:layout_marginTop="7dp"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/pp"
+                android:text="Mp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
